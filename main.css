@@ -1,0 +1,80 @@
+:root{
+    --dark-col: #4D0000;
+    --light-col: #FFE6CC;
+    --higlight-col: #EED5BB;
+}
+
+body {
+    all: unset;
+    color: var(--dark-col);
+    font-family: "freePixel", Courier, monospace;
+    background-image: url("graphics/earth_grad.png");
+    background-repeat: repeat;
+    background-position: right center;
+    background-attachment: fixed;
+
+}
+img {
+  image-rendering: pixelated;
+}
+h1 {
+    text-align: center;
+}
+
+p {
+    /*font-family: serif;*/
+    font-size: 20px;
+}
+a{
+    color: inherit;
+}
+a:hover{
+    background-color: var(--highlight-col);
+}
+
+
+ul{
+    list-style-type: square;
+}
+
+.main-body {
+    --pix-width: min(800px, 100vw);
+    --lr-padding: 2em;
+    --border-width: 0em;
+    --lr-margin: calc((100vw - var(--pix-width))/2 -  var(--lr-padding) - var(--border-width));
+    /* top right bottom left 
+     * top-bottom left-right */
+    width: var(--pix-width);
+    padding: 0em var(--lr-padding) 0em var(--lr-padding);
+    margin: 0em var(--lr-margin) 0em var(--lr-margin);
+    background-color: var(--light-col);
+    border-style: groove;
+    border-width: var(--border-width);
+    border-color: var(--dark-col);
+}
+
+.blink-text{
+	color: #000;
+	font-weight: bold;
+	font-size: 2rem;
+	animation: blinkingText 2s infinite;
+}
+.rotate-element{
+    animation: rotateAnimation 10s infinite;
+    animation-timing-function: linear;
+}
+@keyframes blinkingText{
+	0%		{ color: #10c018;}
+	25%		{ color: #1056c0;}
+	50%		{ color: #ef0a1a;}
+	75%		{ color: #254878;}
+	100%	{ color: #04a1d5;}
+}
+@keyframes rotateAnimation{
+	0%		{ transform : rotate(0deg); }
+	100%	{ transform : rotate(360deg); }
+}
+@font-face {
+  font-family: freePixel;
+  src: url(fonts/freePixel.ttf);
+}
