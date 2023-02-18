@@ -2,28 +2,70 @@
     --dark-col: #4D0000;
     --light-col: #FFE6CC;
     --higlight-col: #EED5BB;
+    --box-padding: 1em;
+    --pix-width: 800px;
+    --lr-padding: 1em;
+    --border-width: 2px;
+    padding: 0;
+    margin: 0;
+}
+@media screen and (max-width: 800px) {
+    :root{
+        --lr-margin: 0px;
+        --main-width: 100vw;
+        --sidebar-width: 100vw;
+        --narrow-width: 100vw;
+    .navigation{
+        float: none;
+    }
+
+    }
+}
+@media screen and (min-width: 800px) {
+    :root{
+        --lr-margin: calc( ( 100vw - var(--pix-width))/2 ) ;
+        --sidebar-width: 200px;
+        --main-width: calc( var(--pix-width) - 2 * var(--border-width));
+        --narrow-width: calc(var(--pix-width) - 4 * var(--border-width) - var(--box-padding) - var(--sidebar-width));
+    }
+    .navigation{
+        float: right;
+    }
+}
+
+div{
+    padding: 0;
+    margin: 0;
 }
 
 body {
     all: unset;
     color: var(--dark-col);
     font-family: "freePixel", Courier, monospace;
-    background-image: url("graphics/earth_grad.png");
+    background-image: url("graphics/earth_grad_2.png");
     background-repeat: repeat;
     background-position: right center;
     background-attachment: fixed;
+    image-rendering: pixelated;
 
 }
 img {
   image-rendering: pixelated;
+  padding: 0em;
 }
 h1 {
-    text-align: center;
+    background-color: var(--dark-col);
+    color: var(--light-col);
+    margin: 0em;
+    text-align: left;
+    width: 100%;
+    font-size: 1em;
 }
 
 p {
     /*font-family: serif;*/
-    font-size: 20px;
+    font-size: 1em;
+    margin: 0 1em 0 1em;
 }
 a{
     color: inherit;
@@ -36,23 +78,56 @@ a:hover{
 ul{
     list-style-type: square;
 }
-
-.main-body {
-    --pix-width: min(800px, 100vw);
-    --lr-padding: 2em;
-    --border-width: 0em;
-    --lr-margin: calc((100vw - var(--pix-width))/2 -  var(--lr-padding) - var(--border-width));
-    /* top right bottom left 
-     * top-bottom left-right */
-    width: var(--pix-width);
-    padding: 0em var(--lr-padding) 0em var(--lr-padding);
-    margin: 0em var(--lr-margin) 0em var(--lr-margin);
-    background-color: var(--light-col);
-    border-style: groove;
-    border-width: var(--border-width);
-    border-color: var(--dark-col);
+.body-container{
+    height: fit-content;
+    margin: 0em var(--lr-margin) 1em var(--lr-margin);
+    padding: 0em;
 }
 
+.main-body {
+    display: inline-block;
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--dark-col);
+
+    clear: right;
+    background-color: var(--light-col);
+    width: var(--main-width);
+    height: fit-content;
+    padding: 0em;
+    margin: 0em;
+
+}
+.narrow-body{
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--dark-col);
+
+
+    /* top right bottom left 
+     * top-bottom left-right */
+    height: fit-content;
+    padding: 0em ;
+    background-color: var(--light-col);
+
+    margin: var(--box-padding) 0em 0em 0em;
+    width: calc(var(--narrow-width) -   2*var(--border-width));
+
+}
+.navigation{
+    width: calc(var(--sidebar-width)  );
+    margin: var(--box-padding) 0em 0em 0em;
+    padding: 0em;
+    height: 100%;
+    border-style: solid;
+    border-width: var(--border-width);
+    border-color: var(--dark-col);
+    background-color: var(--light-col);
+}
+.button{
+    cursor: pointer;
+    margin: 0;
+}
 .blink-text{
 	color: #000;
 	font-weight: bold;
@@ -62,6 +137,14 @@ ul{
 .rotate-element{
     animation: rotateAnimation 10s infinite;
     animation-timing-function: linear;
+}
+#button-container{
+    text-align: center;
+    margin: 1em;
+}
+#me-portrait{
+    width: min(400px, 100vw);
+    float: right;
 }
 @keyframes blinkingText{
 	0%		{ color: #10c018;}

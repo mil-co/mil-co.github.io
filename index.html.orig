@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<<<<<<< HEAD
+    <head>
+        <title> m1l0.net </title>
+        <base target="_self"> <!-- open links relative to self (defualt) -->
+        <link rel="stylesheet" href="main.css"> <!-- link stylesheet -->
+        <link rel="icon" type="image/x-icon" href="/graphics/favicon.ico"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <!-- set scale to 1 and fit to device width
+        this forces the site to display normally on mobile -->
+    </head>
+=======
+    <head> </head>
+>>>>>>> refs/remotes/origin/main
+    <body>
+        <!-- <img height=200em src="graphics/eye.png" alt="Italian Trulli" class="rotate-element"> -->
+        <div class="main-body">
+            
+            <a href="index.html" ><h1 > m1l0.net </h1></a>
+            <p > hello i'm milo [he/they] and welcome to my little slice of cyberspace </p>
+            <ul>
+                <li>
+                    <a href="https://blog.m1l0.net/">blog/tumblr</a>
+                </li>
+                <li>
+                    <a href="https://milocoombs.github.io/">old project site</a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
