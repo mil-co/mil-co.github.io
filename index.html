@@ -8,6 +8,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <!-- set scale to 1 and fit to device width
         this forces the site to display normally on mobile -->
+        <script>
+            function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+            }
+        </script>
+
     </head>
     <body>
         <div class="body-container">
@@ -20,18 +26,8 @@
         </a>
             </div>
 
-            <div class="navigation">
-                <h1> Navigation </h1>
-                <ul>
-                    <li> <a href="index.html"> Index </a> </li>
-                    <li> Links <ul>
-                            <li><a href="https://blog.m1l0.net/">blog/tumblr</a> </li>
-                            <li><a href="https://milocoombs.github.io/">old project site</a></li>
-                    </ul></li>
-                </ul>
-            </div>
-
-        <div class="narrow-body">
+            <iframe class="navigation" src="nav.html" onload="resizeIframe(this)";> </iframe>
+            <div class="narrow-body">
             <h1>Welcome </h1>
             <p > Hello! I'm milo [he/they] and welcome to my little slice of cyberspace. This website it quite new so there's nothing here right now </p>
             
