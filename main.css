@@ -2,7 +2,7 @@
     --dark-col: #4D0000;
     --light-col: #FFE6CC;
     --higlight-col: #EED5BB;
-    --box-padding: 1em;
+    --box-padding: 6px;
     --pix-width: 800px;
     --lr-padding: 1em;
     --border-width: 1px;
@@ -41,7 +41,7 @@ div{
 body {
     all: unset;
     color: var(--dark-col);
-    font-family: "freePixel", Courier, monospace;
+    font-family: "FreePixel", Courier, monospace;
     background-image: url("graphics/earth_grad_2.png");
     background-repeat: repeat;
     background-position: right center;
@@ -51,15 +51,16 @@ body {
 }
 img {
   image-rendering: pixelated;
-  padding: 0em;
+  padding: 0;
 }
 h1 {
     background-color: var(--dark-col);
     color: var(--light-col);
-    margin: 0em;
+    margin: 0;
+    padding-left: var(--lr-padding);
     text-align: left;
-    width: 100%;
-    font-size: 1em;
+    width: calc( 100% - var(--lr-padding));
+    font-size: 1.2em;
 }
 
 p {
@@ -158,6 +159,6 @@ ul{
 	100%	{ transform : rotate(360deg); }
 }
 @font-face {
-  font-family: freePixel;
-  src: url(fonts/freePixel.ttf);
+  font-family: FreePixel;
+  src: url(fonts/FreePixel.ttf);
 }
