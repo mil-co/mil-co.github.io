@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> m1l0.net </title>
+        <base target="_self"> <!-- open links relative to self (defualt) -->
+        <link rel="stylesheet" href="../../main.css"> <!-- link stylesheet -->
+        <link rel="icon" type="image/x-icon" href="../../graphics/favicon.ico"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <!-- set scale to 1 and fit to device width
+        this forces the site to display normally on mobile -->
+        <script>
+            function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="body-container">
+
+        <!-- <img height=200em src="graphics/eye.png" alt="Italian Trulli" class="rotate-element"> -->
+        <div class="main-body">
+            
+        <a href="../../index.html" >
+            <img src="../../graphics/me.png" id="me-portrait">
+        </a>
+            </div>
+
+            <iframe class="navigation" src="../../nav.html" onload="resizeIframe(this)";> </iframe>
+            <div class="narrow-body">
+              <h1>Quantum Tunneling</h1>
+              <p> I have been trying and failing to build a scanning tunneling microscope, but I have learned some interesting things along the way.</p> 
+
+              <p> The key compoenent of a STM is the piezo scanner which moves the tip relative to the sample. I decided to go for something very close to the "tripod" design you see in textbooks, using 1mm wide 5mm long multilayer stacks bought on eBay for about $5 each. I machined a flexure to hold them from a single piece of aluminium. </p>
+
+              <p><img src="2-axis.jpeg" class="body-image"></p>
+              <p> To reduce the inertia of the z-axis piezo, it has no flexure but is glued directly to the end of the aluminium cantilever. This sounded like a good decision but I would live to regret it: the very fragile 1mm x 1mm glue bonds made changing the tip without requiring new glue very difficult. Note the excessive superglue residue in the picture below.
+              </p>
+
+              <p>
+
+
+              <img src="scanner.jpeg" class="body-image">
+
+            </p>
+            <p>
+            I used this scanner (only the z-piezo) to measure a tunneling current of 1nA between two gold plated wires. This was achived by amplifying the tunneling current and subtracting it from 1nA to produce an error signal which went through an analogue integral feedback loop. I could sustain this current without crashing the wires into each-other (seen by the current amp suddenly saturating)for 10s of seconds but the drift was considerable. Too much for use in an STM. This setup is shown below:
+            </p>
+            <p>
+           <img src="tunneling.jpeg" class="body-image">
+            </p>
+            <p>
+            I think what this project needs is better acoustic and electronic shielding and thermal insulation from its environment.
+            </p>
+            <p>
+            September 2022
+            </p>
+            <p>
+            Update 2024: I intend to finish this project at some point but it lost momentum. It is definitely achivable and hobbyists have made functional STMs with much more primitive scanners, howevr generally with better vibration isolation. Maybe this is one to revisit once I graduate, I still have all the parts.
+            </p>
+  </div>
+        </div>
+  </body>
+</html>

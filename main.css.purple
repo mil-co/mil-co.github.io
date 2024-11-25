@@ -1,30 +1,31 @@
 :root{
-    --dark-col: #4D0000;
-    --light-col: #FFE6CC;
-    --higlight-col: #EED5BB;
+    --dark-col: #000000;
+    --dark-bg-col: #303;
+    --light-col: #c9f;
+    --hl-col: #FFF;
     --box-padding: 6px;
     --pix-width: 800px;
     --lr-padding: 1em;
     --border-width: 1px;
     padding: 0;
     margin: 0;
+
+    image-rendering: pixelated;
 }
-/* on mobile */
 @media screen and (max-width: 800px) {
     :root{
         --lr-margin: 0px;
         --main-width: 100vw;
         --sidebar-width: 100vw;
         --narrow-width: 100vw;
-    }
-    aside{
+    .navigation{
         float: none;
     }
+    .navigation-text{
+    }
 
-    
+    }
 }
-
-/* on desktop */
 @media screen and (min-width: 800px) {
     :root{
         --lr-margin: calc( ( 100vw - var(--pix-width))/2 ) ;
@@ -32,7 +33,7 @@
         --main-width: calc( var(--pix-width) - 2 * var(--border-width));
         --narrow-width: calc(var(--pix-width) - 4 * var(--border-width) - var(--box-padding) - var(--sidebar-width));
     }
-    aside{
+    .navigation{
         position: absolute;
     }
 }
@@ -43,23 +44,27 @@ div{
 }
 
 body {
+    background-color: var(--light-col);
     all: unset;
     color: var(--dark-col);
     font-family: "FreePixel", Courier, monospace;
-    background-image: url("graphics/earth_grad_2.png");
+    /*background-image: url("graphics/earth_grad_2.png");
     background-repeat: repeat;
     background-position: right center;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
     image-rendering: pixelated;
+    background-image: url("graphics/houndstooth.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 16px 16px;
 
 }
 img {
-  image-rendering: pixelated;
   padding: 0;
 }
 h1 {
-    background-color: var(--dark-col);
-    color: var(--light-col);
+    background-color: var(--dark-bg-col);
+    color: var(--hl-col);
     margin: 0;
     padding-left: var(--lr-padding);
     text-align: left;
@@ -87,13 +92,6 @@ a:hover{
 
 ul{
     list-style-type: square;
-    padding-left: 1em;
-}
-.body-image{
-    width: 60%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .body-container{
     height: fit-content;
@@ -131,7 +129,7 @@ ul{
     width: calc(var(--narrow-width) -   2*var(--border-width));
 
 }
-aside{
+.navigation{
     width: calc(var(--sidebar-width)  );
     right: calc(var(--lr-margin));
     margin: var(--box-padding) 0em 0em 0em;
@@ -143,7 +141,6 @@ aside{
 }
 .navigation-text{
     columns: 200px 3;
-    padding-left: 1em;
 }
 .collapsible {
   background-color: #777;

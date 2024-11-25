@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> m1l0.net </title>
+        <base target="_self"> <!-- open links relative to self (defualt) -->
+        <link rel="stylesheet" href="../../main.css"> <!-- link stylesheet -->
+        <link rel="icon" type="image/x-icon" href="../../graphics/favicon.ico"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <!-- set scale to 1 and fit to device width
+        this forces the site to display normally on mobile -->
+        <script>
+            function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="body-container">
+
+        <!-- <img height=200em src="graphics/eye.png" alt="Italian Trulli" class="rotate-element"> -->
+        <div class="main-body">
+            
+        <a href="../../index.html" >
+            <img src="../../graphics/me.png" id="me-portrait">
+        </a>
+            </div>
+
+            <iframe class="navigation" src="../../nav.html" onload="resizeIframe(this)";> </iframe>
+            <div class="narrow-body">
+              <h1>Vacuum System</h1>
+              <p> I have wanted to have a high vacuum chamber for a long time and at the begining of the summer, I finally found a diffusion pump for sale - its a Metropolitan Vickers 2" air cooled pump, from about half way throuhg the 20th century. The heater was burned out but it used a "band" type heater, readily available on AliExpress. I installed a very simple thermostat on the pump comprising a 100k NTC thermistor, a SSR and an Arduino Uno (don't judge me!).</p> 
+
+              <p> I mounted the pump in a frame of aluminium extrusion re-used from my second 3D printer, and installed a large mains-powered fan from some ancient computer. The datasheet for the pump is lost to history so I have no idea what specifications it requires in its fan, but this one managed to keep the top of the pump cool to the touch in opperation. </p>
+
+              <p>On the roughing side, I used soldered copper pipes to adapt the strange imperial thread exhaust of the pump to KF10, which connects to a tee with an isolation valve and a range-exteded pirani gauge from ebay. This setup is pictured below.
+
+
+              <img src="pump.jpeg" class="body-image">
+
+            </p>
+            <p>
+            The inlet flange was naturally not standard either. The pump had no baffle so I machined a large adapter which adapted the inlet to KF40 and had space inside for a "halo" type baffle.
+            </p>
+            <p>
+            Finally, this could be connected to commercially available (ie. second had from ebay) KF40 hardware. I bought a cross to use as a chamber. This is shown in the image below. Also shown is the roughing pump, the home-made pump-inlet-to-KF40 and KF40-to-KF25 adapters, the control pannel, a Bayard-Alpert gauge which doesn't work, and my desk clutter.
+              <img src="system.jpeg" class="body-image">
+            </p>
+            <p>
+            So, does it work?
+            </p>
+            <p>
+            Kind of. The base pressure of the rotary vane pump is about 10mTorr and when the diffusion pump is turned on, the chamber pressure drops to about 0.01mTorr. This is pretty bad for a diffusion pump. Exchanging the fluid makes no difference so I suspect a leak is the likely cause. I will try to solve this problem but in the meantime, is just barely good enough for <a href="../thermionic/thermionic.html">what I want it for</a>.
+            </p>
+  </div>
+        </div>
+  </body>
+</html>
