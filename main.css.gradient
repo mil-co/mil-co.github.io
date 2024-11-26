@@ -1,7 +1,10 @@
 :root{
-    --dark-col: #4D0000;
-    --light-col: #FFE6CC;
+    --dark-col: #000000;
+    --light-col: #F0F0F0;
     --higlight-col: #EED5BB;
+    --gradient-col-1: #94bbe9;
+    --gradient-col-2: #94bbe9;
+    --gradient-col-2: #22c1c3;
     --box-padding: 6px;
     --pix-width: max(900px, 50vw);
     --lr-padding: 1em;
@@ -51,6 +54,8 @@ body {
     background-position: right center;
     background-attachment: fixed;
     image-rendering: pixelated;
+    background: var(--gradient-col-1);
+    background: radial-gradient(circle, var(--gradient-col-1) 0%, var(--gradient-col-2) 100%);
 
 }
 img {
@@ -61,9 +66,10 @@ img {
 
 
 h1 {
-    background-color: var(--dark-col);
+    background-color: var(--gradient-col-2);
+    background-image: linear-gradient(circle, var(--gradient-col-1) 0%, var(--gradient-col-2) 100%);
     color: var(--light-col);
-    margin: 0 0 0.5em 0;
+    margin: 0;
     padding-left: var(--lr-padding);
     text-align: left;
     width: calc( 100% - var(--lr-padding));
@@ -101,8 +107,6 @@ ul{
     justify-content:center;
 }
 .nav-ul{
-    margin: 0;
-    padding: 0em;
     padding-left: 1em;
     padding-right: 0;
 
@@ -153,7 +157,7 @@ ul{
     padding: 0em ;
     background-color: var(--light-col);
 
-    margin: var(--box-padding) 0em 0em 0em;
+    margin: var(--box-padding) 0em var(--box-padding) 0em;
     width: calc(var(--narrow-width) -   2*var(--border-width));
 
 }
@@ -169,9 +173,6 @@ aside{
 }
 .navigation-text{
     columns: 200px 3;
-    padding: 0;
-    margin: 0;
-    padding-bottom: 1em;
     padding-left: 1em;
     padding-right: 1em;
 }
