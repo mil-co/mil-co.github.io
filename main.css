@@ -144,6 +144,7 @@ aside{
 .navigation-text{
     columns: 200px 3;
     padding-left: 1em;
+    padding-right: 1em;
 }
 .collapsible {
   background-color: #777;

@@ -1,21 +1,29 @@
 let navText = `
-<h1> Navigation </h1>
+    <h1> Navigation </h1>
     <div class="navigation-text"><ul>
-        <li> <a href="index.html"> Index </a> </li>
+        <li> <a href="/index.html"> Index </a> </li>
         <li> Links <ul>
                 <li><a href="https://blog.m1l0.net/">blog/tumblr</a> </li>
                 <li><a href="https://milocoombs.github.io/">old project site</a></li>
 
         </ul></li>
         <li> Projects <ul>
-                <li><a href="p/3dp/3dp.html">RepStrap printer</a></li>
-                <li><a href="p/ASL/ASL.html">oak longbow</a></li>
-                <li><a href="p/CanSat/CanSat.html">cansat</a></li>
-                <li><a href="p/Hatchet/Hatchet.html">hatchet haft</a></li>
-                <li><a href="p/RG65/RG65.html">model yacht</a></li>
-                <!-- <li><a href="p/Lorenz/Lorenz.html">lorenz emulator</a></li> -->
-                <li><a href="p/tap-wrench/tap-wrench.html">tap wrench</a></li>
+                <li> "high" vacuum <ul>
+                    <li><a href="/p/vac/vac.html">system and components</a>
+                    </li>
+                    <li><a href="/p/thermionic/thermionic.html">hot cathode gauge</a></li>
+                </ul></li>
+                <li><a href="/p/verge/verge.html">1820 verge watch repair</a></li>
+                <li><a href="/p/3dp/3dp.html">3D printer</a></li>
+                <li><a href="/p/STM/STM.html">STM</a></li>
+                <li><a href="/p/ASL/ASL.html">oak longbow</a></li>
+                <li><a href="/p/CanSat/CanSat.html">cansat</a></li>
+                <li><a href="/p/Hatchet/Hatchet.html">hatchet haft</a></li>
+                <li><a href="/p/RG65/RG65.html">model yacht</a></li>
+           <!-- <li><a href="/p/Lorenz/Lorenz.html">lorenz emulator</a></li> -->
+                <li><a href="/p/tap-wrench/tap-wrench.html">tap wrench</a></li>
 
         </ul></li>
         </ul></div>
+
 `;

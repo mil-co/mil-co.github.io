@@ -8,12 +8,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <!-- set scale to 1 and fit to device width
         this forces the site to display normally on mobile -->
-        <script>
+        <!--<script>
             function resizeIframe(obj) {
             obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
             }
-        </script>
+        </script> -->
 
+        <script src="../../nav.txt"></script>
     </head>
     <body>
         <div class="body-container">
@@ -26,7 +27,12 @@
         </a>
             </div>
 
-            <iframe class="navigation" src="../../nav.html" onload="resizeIframe(this)";> </iframe>
+            <aside>
+                <script>
+                    document.write(navText);
+                </script>
+            </aside>
+            <!-- <iframe class="navigation" src="../../nav.html" onload="resizeIframe(this)";> </iframe>-->
             <div class="narrow-body">
               <h1>RepStrap 3D Printer</h1>
     <p>This is my third 3d printer, following a Prusa simplified Mendel and a Prism Mendel each cannibalising the expensive parts of the previous. I wanted to make it as simple and easy to adjust as possible, since tramming the previous printers was very time consuming. It's also intended to be portable, as in doesn't need recalibration after moving. This is achieved by having the frame supported on three feet so that it is always supported in the same way regardless of the surface it is on.</p>
