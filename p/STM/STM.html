@@ -8,11 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <!-- set scale to 1 and fit to device width
         this forces the site to display normally on mobile -->
-        <script>
-            function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-            }
-        </script>
+        <script src="../../nav.txt"></script>
 
     </head>
     <body>
@@ -26,7 +22,11 @@
         </a>
             </div>
 
-            <iframe class="navigation" src="../../nav.html" onload="resizeIframe(this)";> </iframe>
+            <aside>
+                <script>
+                    document.write(navText);
+                </script>
+            </aside>
             <div class="narrow-body">
               <h1>Quantum Tunneling</h1>
               <p> I have been trying and failing to build a scanning tunneling microscope, but I have learned some interesting things along the way.</p> 

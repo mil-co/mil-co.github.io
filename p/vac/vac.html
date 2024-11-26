@@ -8,11 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <!-- set scale to 1 and fit to device width
         this forces the site to display normally on mobile -->
-        <script>
-            function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
-            }
-        </script>
+        <script src="../../nav.txt"></script>
 
     </head>
     <body>
@@ -26,7 +22,11 @@
         </a>
             </div>
 
-            <iframe class="navigation" src="../../nav.html" onload="resizeIframe(this)";> </iframe>
+            <aside>
+                <script>
+                    document.write(navText);
+                </script>
+            </aside>
             <div class="narrow-body">
               <h1>Vacuum System</h1>
               <p> I have wanted to have a high vacuum chamber for a long time and at the begining of the summer, I finally found a diffusion pump for sale - its a Metropolitan Vickers 2" air cooled pump, from about half way throuhg the 20th century. The heater was burned out but it used a "band" type heater, readily available on AliExpress. I installed a very simple thermostat on the pump comprising a 100k NTC thermistor, a SSR and an Arduino Uno (don't judge me!).</p> 

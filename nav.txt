@@ -1,14 +1,14 @@
 let navText = `
     <h1> Navigation </h1>
-    <div class="navigation-text"><ul>
+    <div class="navigation-text"><ul class="nav-ul">
         <li> <a href="/index.html"> Index </a> </li>
-        <li> Links <ul>
+        <li> Links <ul class="nav-ul">
                 <li><a href="https://blog.m1l0.net/">blog/tumblr</a> </li>
                 <li><a href="https://milocoombs.github.io/">old project site</a></li>
 
         </ul></li>
-        <li> Projects <ul>
-                <li> "high" vacuum <ul>
+        <li> Projects <ul class="nav-ul">
+                <li> "high" vacuum <ul class="nav-ul">
                     <li><a href="/p/vac/vac.html">system and components</a>
                     </li>
                     <li><a href="/p/thermionic/thermionic.html">hot cathode gauge</a></li>
