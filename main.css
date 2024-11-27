@@ -1,7 +1,9 @@
+@import "pro.css";
+
 :root{
-    --dark-col: #4D0000;
+    /*--dark-col: #4D0000;
     --light-col: #FFE6CC;
-    --higlight-col: #EED5BB;
+    --higlight-col: #EED5BB;*/
     --box-padding: 6px;
     --pix-width: max(900px, 50vw);
     --lr-padding: 1em;
@@ -41,7 +43,7 @@ div{
     padding: 0;
     margin: 0;
 }
-
+/*
 body {
     all: unset;
     color: var(--dark-col);
@@ -52,7 +54,7 @@ body {
     background-attachment: fixed;
     image-rendering: pixelated;
 
-}
+}*/
 img {
   image-rendering: pixelated;
   padding: 0;
@@ -219,6 +221,7 @@ aside{
 #me-portrait{
     width: min(400px, 100vw);
     float: right;
+    image-rendering: pixelated;
 }
 @keyframes blinkingText{
 	0%		{ color: #10c018;}
