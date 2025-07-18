@@ -3,7 +3,6 @@ let navText = `
     <div class="navigation-text"><ul class="nav-ul">
         <li><b> <a href="/index.html"> Index </a> </b></li>
         <li><b> Links <ul class="nav-ul"> </b>
-                <li><a href="https://blog.m1l0.net/">blog/tumblr</a> </li>
                 <li><a href="https://milocoombs.github.io/">old project site</a></li>
 
         </ul></li>
